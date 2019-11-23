@@ -9,7 +9,7 @@ import IR from './IR'
 
 global._isSignIn = false;
 global._email = null;
-global._ipAddress = "192.168.1.16";
+global._ipAddress = "192.168.1.10";
 
 
 

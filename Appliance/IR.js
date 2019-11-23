@@ -21,18 +21,19 @@ export default  class IR extends React.Component {
         image: null,
         modalVisible: false,
         signIn: true,
-        amount: "1"
+      
+    
 
     };
 
-    addItem() {
-        fetch(`http://${global._ipAddress}:3000/item/addItem`, {
+    removeItem() {
+        fetch(`http://${global._ipAddress}:3000/item/removeItem`, {
             method: 'POST',
             headers: {
                 Accept: 'application/json',
                 'Content-Type': 'application/json',
             },
-            body: JSON.stringify({ email: global._email, item: this.state.predictions[0].className, amount: this.state.amount }),
+            body: JSON.stringify({ email: global._email, item: this.state.predictions[0].className }),
         })
             .then((response) => response.json())
             .then((responseJson) => {
@@ -41,8 +42,14 @@ export default  class IR extends React.Component {
                     return
                 }
                 else if (responseJson.res === "Yes") {
-                    this.setState({ predictions: null, image: null, amount: "1", modalVisible: false })
                     Alert.alert('Add Succeed')
+                    this.setState({ predictions: null, image: null, modalVisible: false })
+                    
+                }else if (responseJson.res === "No") {
+                        Alert.alert('Cannot remove')
+                        this.setState({ predictions: null, image: null, modalVisible: false })
+                        
+                    
                 } else {
                     Alert.alert('Error occurred')
                     return
@@ -54,7 +61,7 @@ export default  class IR extends React.Component {
     }
 
     closeModal() {
-        this.setState({ predictions: null, image: null, amount: "1", modalVisible: false })
+        this.setState({ predictions: null, image: null, modalVisible: false })
     }
 
     async componentDidMount() {
@@ -158,15 +165,10 @@ export default  class IR extends React.Component {
                             <View style={styles.innerContainer}>
 
                                 {this.state.modalVisible ? <Text style={styles.item}> {this.state.predictions[0].className} </Text> : <Text />}
-                                <TextInput
-                                    style={{ fontSize: 25 }}
-                                    placeholder="Amount: 1"
-                                    onChangeText={amount => this.setState({ amount })}
-                                    value={this.state.amount}
-                                />
+
                                 <Buttons
-                                    onPress={() => this.addItem()}
-                                    title="Add item "
+                                    onPress={() => this.removeItem()}
+                                    title="Remove item "
                                 >
                                 </Buttons>
                                 <Buttons
