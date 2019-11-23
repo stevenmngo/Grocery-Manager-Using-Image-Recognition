@@ -42,23 +42,23 @@ This project utilized image recognition to streamline accounting of purchased fo
 
 ## User Interface
 
-* Menu
+* <strong>Menu</strong>
 
 <img width="347" alt="Menu" src="image/IMG_7620.PNG">
 
-* Sign In/Sign Up
+* <strong>Sign In/Sign Up</strong>
 
 <img width="345" alt="Sign in" src="image/IMG_7600.PNG">           <img width="345" alt="Sign up" src="image/IMG_7601.PNG">
 
-* Inventory
+* <strong>Inventory</strong>
 
 <img width="344" alt="Inventory" src="image/IMG_7602.PNG">
 
-* History 
+* <strong> History </strong>
 
 <img width="344" alt="History" src="image/IMG_7603.PNG">
 
-* Scan Item
+* <strong>Scan Item</strong>
 
 <img width="348" alt="Scan Item" src="image/IMG_7604.PNG">        <img width="348" alt="Scan Item" src="image/IMG_7605.PNG">     
 
