@@ -1,5 +1,4 @@
-# Grocery-Manager-Using-Image-Recognition
-Grocery Manager Using Image Recognition
+
 
 <img width="486" alt="Screen Shot 2019-04-20 at 4 39 47 PM" src="image/Screen Shot 2019-11-23 at 12.42.18 AM.png">
 
@@ -18,7 +17,9 @@ This project utilized image recognition to streamline accounting of purchased fo
 
       npm install expo-cli --global
       
-* User App/Appliance Simulated App
+      
+      
+*  <strong> User App/Appliance Simulated App </strong>
 
 3.  Change directory to the User-App/Appliance repository
 4.  Then Run the following command lines:
@@ -28,13 +29,16 @@ This project utilized image recognition to streamline accounting of purchased fo
      
 5.  Scan the the QR Code using Expo Client app on your Smart phone
 
-* Server
+
+
+*  <strong> Server </strong>
 
 6.  Run MySQL server from your machine 
 7.  Change directory to the Server repository
 8.  Run the server by using this command line:
 
       nodemon index.js
+      
 
 ## User Interface
 
