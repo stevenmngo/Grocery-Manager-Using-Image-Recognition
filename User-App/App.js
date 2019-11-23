@@ -37,8 +37,8 @@ import Tab from './pages/Auth/Tab'
 import CustomSidebarMenu from './CustomSidebarMenu';
 
 global.currentScreenIndex = 0;
-global._isSignIn = true;
-global._email = "minh@gmail.com";
+global._isSignIn = false;
+global._email = "";
 // require module
 
 // Get Local IP
